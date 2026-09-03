@@ -5,7 +5,8 @@ export default function OurStory() {
   const ref = useReveal('.reveal-item', { stagger: 0.15 })
 
   return (
-    <section id="our-story" ref={ref} className="relative bg-ivory overflow-hidden">
+    <section id="our-story" ref={ref} className="relative bg-[#f4f0e8] overflow-hidden">
+      {/* <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-ink/10 to-transparent pointer-events-none" /> */}
       <div className="grid md:grid-cols-2 min-h-[400px]">
         <div className="relative flex items-center px-6 md:px-16 py-20 md:py-0 order-2 md:order-1">
           {/* Decorative arc, echoing the circular motif from the brand mark */}
