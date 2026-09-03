@@ -18,8 +18,7 @@ export default function OurStory() {
             </h2>
             <div className="reveal-item w-14 h-px bg-gold mb-6" />
             <p className="reveal-item text-ink/70 leading-relaxed">
-              From manufacturing excellence to architectural innovation — the story
-              behind NUVEX™ and the people who engineer every surface with purpose.
+              From architectural innovation to material excellence — the story behind NUVEX™ is driven by a commitment to engineering premium surfaces with absolute purpose.
             </p>
           </div>
         </div>

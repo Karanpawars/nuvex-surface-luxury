@@ -2,12 +2,13 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ArrowRight, ChevronDown } from 'lucide-react'
 import heroBg from '../assets/images/hero-bg.png'
+import heroBgMobile from '../assets/images/hero-bg-mobile.png'
 
 const rotatingLines = [
-  'The Future of High-End Residential Design',
-  'The Future of Commercial Spaces',
-  'The Future of Healthcare Environments',
-  'The Future of Luxury Hospitality',
+  'High-End Residential Interiors',
+  'Premium Commercial Spaces',
+  'Specialized Healthcare Environments',
+  'Luxury Hospitality Architecture',
 ]
 
 export default function Hero() {
@@ -63,11 +64,20 @@ export default function Hero() {
     >
       {/* HERO BACKGROUND IMAGE */}
       <div className="hero-bg absolute inset-0">
-        <img
+        {/* <img
           src={heroBg}
           alt=""
           className="absolute inset-0 w-full h-auto object-cover object-cover"
-        />
+        /> */}
+        <picture>
+          <source media="(max-width: 767px)" srcSet={heroBgMobile} />
+
+          <img
+            src={heroBg}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </picture>
 
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/25" />

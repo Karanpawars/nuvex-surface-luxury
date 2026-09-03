@@ -12,7 +12,7 @@ export const principles = [
   {
     icon: 'Cog',
     title: 'Precision Engineering',
-    text: 'Engineered with micron-level precision to deliver superior performance, consistency, and flawless finishes.',
+    text: 'Engineered with absolute dimensional precision to deliver superior performance, consistency, and flawless finishes.',
   },
   {
     icon: 'Compass',
