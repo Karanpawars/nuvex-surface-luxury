@@ -8,6 +8,7 @@
 
 import shade01CU from '../assets/images/shades/series-1/Nuvex PM 701 White Onyx-20260919T124910Z-1-001/Nuvex PM 701 White Onyx/Nuvex PM 701 White Onyx CU Image 2.JPG'
 import shade01Full from '../assets/images/shades/series-1/Nuvex PM 701 White Onyx-20260919T124910Z-1-001/Nuvex PM 701 White Onyx/Nuvex PM 701 White Onyx Full Sheet Image 1.JPG'
+import renderImage1 from '../assets/images/shades/series-1/Nuvex PM 701 White Onyx-20260919T124910Z-1-001/Nuvex PM 701 White Onyx/01.png'
 
 import shade01Kitchen from '../assets/images/shades/series-1/applications/shade-01-kitchen.jpg'
 import shade01Office from '../assets/images/shades/series-1/applications/shade-01-office.jpg'
@@ -50,7 +51,7 @@ export const solidSurfaceImages = [
 
 import shade02CU from '../assets/images/shades/series-1/Nuvex PM 702 Breccia Aurora-20260919T124915Z-1-001/Nuvex PM 702 Breccia Aurora/Nuvex PM 702 Breccia Aurora CU image.jpg'
 import shade02Full from '../assets/images/shades/series-1/Nuvex PM 702 Breccia Aurora-20260919T124915Z-1-001/Nuvex PM 702 Breccia Aurora/Nuvex PM 702 Breccia Aurora Full Sheet Image 1.jpg'
-
+import renderImage2 from '../assets/images/shades/series-1/Nuvex PM 702 Breccia Aurora-20260919T124915Z-1-001/Nuvex PM 702 Breccia Aurora/02.png'
 
 
 
@@ -59,6 +60,7 @@ import shade02Full from '../assets/images/shades/series-1/Nuvex PM 702 Breccia A
 // =========================================================
 
 import shade03Full from '../assets/images/shades/series-1/Nuvex PM 703 Travertine Linear-20260919T124918Z-1-001 (1)/Nuvex PM 703 Travertine Linear/Nuvex PM 703 TRavertime Linear Full Sheet Image 1.JPG'
+import renderImage3 from '../assets/images/shades/series-1/Nuvex PM 703 Travertine Linear-20260919T124918Z-1-001 (1)/Nuvex PM 703 Travertine Linear/03.JPEG'
 
 
 
@@ -68,22 +70,22 @@ import shade03Full from '../assets/images/shades/series-1/Nuvex PM 703 Travertin
 
 import shade04CU from '../assets/images/shades/series-1/Nuvex PM 704 Onyx Crema-20260919T124919Z-1-001/Nuvex PM 704 Onyx Crema/Nuvex PM 704 Onyx Crema CU Image.JPG'
 import shade04Full from '../assets/images/shades/series-1/Nuvex PM 704 Onyx Crema-20260919T124919Z-1-001/Nuvex PM 704 Onyx Crema/Nuvex PM 704 Onyx Crema Full Sheet Image.JPG'
-
-
+import renderImage4 from '../assets/images/shades/series-1/Nuvex PM 704 Onyx Crema-20260919T124919Z-1-001/Nuvex PM 704 Onyx Crema/04.JPEG'
 
 // =========================================================
 // SHADE 05 — STATUARIO PREMIUM
 // =========================================================
 
-import shade05CU1 from '../assets/images/shades/series-1/Nuvex PM 705 Statuario Premium-20260919T124920Z-1-001/Nuvex PM 705 Statuario Premium/Nuvex PM 705 Statuario Premium CU Image 1.JPG'
-import shade05CU2 from '../assets/images/shades/series-1/Nuvex PM 705 Statuario Premium-20260919T124920Z-1-001/Nuvex PM 705 Statuario Premium/Nuvex PM 705 Statuario Premium Full Sheet Image.JPG'
+import shade05CU1 from '../assets/images/shades/series-1/Nuvex PM 705 Statuario Premium-20260919T124920Z-1-001/Nuvex PM 705 Statuario Premium/Nuvex PM 705 Statuario Premium CU Image 1.jpg'
+import shade05CU2 from '../assets/images/shades/series-1/Nuvex PM 705 Statuario Premium-20260919T124920Z-1-001/Nuvex PM 705 Statuario Premium/Nuvex PM 705 Statuario Premium Full Sheet Image.jpg'
+import renderImage5 from '../assets/images/shades/series-1/Nuvex PM 705 Statuario Premium-20260919T124920Z-1-001/Nuvex PM 705 Statuario Premium/05.JPEG'
 
 // =========================================================
 // SHADE 06 — Bianco Striato
 // =========================================================
 
 import shade06Full from '../assets/images/shades/series-1/Nuvex PM 706 Bianco Striato-20260919T124922Z-1-001 (1)/Nuvex PM 706 Bianco Striato/Nuvex PM 706 Bianco Striato Full Sheet Image 2.jpg'
-
+import renderImage6 from '../assets/images/shades/series-1/Nuvex PM 706 Bianco Striato-20260919T124922Z-1-001 (1)/Nuvex PM 706 Bianco Striato/06.JPEG'
 
 
 // =========================================================
@@ -92,7 +94,7 @@ import shade06Full from '../assets/images/shades/series-1/Nuvex PM 706 Bianco St
 
 import shade07CU from '../assets/images/shades/series-1/Nuvex PM 707 Grigio Carnico-20260919T124923Z-1-001 (1)/Nuvex PM 707 Grigio Carnico/Nuvex PM 707 Grigio Carnico CU Image 6.JPG'
 import shade07Full from '../assets/images/shades/series-1/Nuvex PM 707 Grigio Carnico-20260919T124923Z-1-001 (1)/Nuvex PM 707 Grigio Carnico/Nuvex PM 707 Grigio Carnico Full Sheet Image.JPG'
-
+import renderImage7 from '../assets/images/shades/series-1/Nuvex PM 707 Grigio Carnico-20260919T124923Z-1-001 (1)/Nuvex PM 707 Grigio Carnico/07.JPEG'
 
 
 // =========================================================
@@ -102,7 +104,7 @@ import shade07Full from '../assets/images/shades/series-1/Nuvex PM 707 Grigio Ca
 
 import shade08CU from '../assets/images/shades/series-1/Nuvex PM 708 Windswept Mist-20260919T124930Z-1-001/Nuvex PM 708 Windswept Mist/Nuvex PM 708 Windswept Mist CU Image 3.JPG'
 import shade08Full from '../assets/images/shades/series-1/Nuvex PM 708 Windswept Mist-20260919T124930Z-1-001/Nuvex PM 708 Windswept Mist/Nuvex PM 708 Windswept Mist Full Sheet Image.JPG'
-
+import renderImage8 from '../assets/images/shades/series-1/Nuvex PM 708 Windswept Mist-20260919T124930Z-1-001/Nuvex PM 708 Windswept Mist/08.JPEG'
 
 
 // =========================================================
@@ -110,7 +112,7 @@ import shade08Full from '../assets/images/shades/series-1/Nuvex PM 708 Windswept
 // =========================================================
 
 import shade09Full from '../assets/images/shades/series-1/Nuvex PM 709 Dune Horizion-20260919T124931Z-1-001/Nuvex PM 709 Dune Horizion/Nuvex PM 709 Dune Horizion Full Sheet Image.JPG'
-
+import renderImage9 from '../assets/images/shades/series-1/Nuvex PM 709 Dune Horizion-20260919T124931Z-1-001/Nuvex PM 709 Dune Horizion/09.JPEG'
 
 
 // =========================================================
@@ -119,6 +121,7 @@ import shade09Full from '../assets/images/shades/series-1/Nuvex PM 709 Dune Hori
 
 import shade10CU1 from '../assets/images/shades/series-1/Nuvex PM 710 Nero Portoro-20260919T124932Z-1-001/Nuvex PM 710 Nero Portoro/Nuvex PM 710 Nero Portoro CU Image 1.JPG'
 import shade10Full from '../assets/images/shades/series-1/Nuvex PM 710 Nero Portoro-20260919T124932Z-1-001/Nuvex PM 710 Nero Portoro/Nuvex PM 710 Nero Portoro Full Sheet Image.JPG'
+import renderImage10 from '../assets/images/shades/series-1/Nuvex PM 710 Nero Portoro-20260919T124932Z-1-001/Nuvex PM 710 Nero Portoro/10.JPEG'
 
 // import { Link } from "react-router-dom";
 
@@ -150,6 +153,12 @@ export const series1Shades = [
         src: shade01CU,
         title: 'White Onyx',
         usage: 'Close-up Detail',
+        type: 'image',
+      },
+      {
+        src: renderImage1,
+        title: 'White Onyx',
+        usage: 'Render Image',
         type: 'image',
       },
       // {
@@ -208,6 +217,12 @@ export const series1Shades = [
         usage: 'Close-up Detail',
         type: 'image',
       },
+      {
+        src: renderImage2,
+        title: 'Breccia Aurora',
+        usage: 'Render Image',
+        type: 'image',
+      },
       // {
       //   src: shade02Kitchen,
       //   title: 'Breccia Aurora',
@@ -258,6 +273,12 @@ export const series1Shades = [
         usage: 'Full Material Sheet',
         type: 'image',
       },
+      {
+        src: renderImage3,
+        title: 'Travertine Linear',
+        usage: 'Full Material Sheet',
+        type: 'image',
+      },
       // {
       //   src: shade03Kitchen,
       //   title: 'Travertine Linear',
@@ -304,6 +325,12 @@ export const series1Shades = [
     images: [
       {
         src: shade04Full,
+        title: 'Onyx Crema',
+        usage: 'Full Material Sheet',
+        type: 'image',
+      },
+      {
+        src: renderImage4,
         title: 'Onyx Crema',
         usage: 'Full Material Sheet',
         type: 'image',
@@ -370,6 +397,12 @@ export const series1Shades = [
         usage: 'Close-up Detail 02',
         type: 'image',
       },
+      {
+        src: renderImage5,
+        title: 'Statuario Premium',
+        usage: 'Close-up Detail 02',
+        type: 'image',
+      },
       // {
       //   src: shade05Kitchen,
       //   title: 'Statuario Premium',
@@ -418,6 +451,12 @@ export const series1Shades = [
         src: shade06Full,
         title: 'Bianco Striato',
         usage: 'Full Material Sheet',
+        type: 'image',
+      },
+      {
+        src: renderImage6,
+        title: 'Bianco Striato',
+        usage: 'Close-up Detail',
         type: 'image',
       },
       // {
@@ -476,6 +515,12 @@ export const series1Shades = [
         usage: 'Close-up Detail',
         type: 'image',
       },
+      {
+        src: renderImage7,
+        title: 'Grigio Carnico',
+        usage: 'Close-up Detail',
+        type: 'image',
+      },
       // {
       //   src: shade07Kitchen,
       //   title: 'Grigio Carnico',
@@ -528,6 +573,12 @@ export const series1Shades = [
       },
       {
         src: shade08CU,
+        title: 'Windswept Mist',
+        usage: 'Close-up Detail',
+        type: 'image',
+      },
+      {
+        src: renderImage8,
         title: 'Windswept Mist',
         usage: 'Close-up Detail',
         type: 'image',
@@ -610,6 +661,12 @@ export const series1Shades = [
         usage: 'Full Material Sheet',
         type: 'image',
       },
+      {
+        src: renderImage9,
+        title: 'Dune Horizon',
+        usage: 'Full Material Sheet',
+        type: 'image',
+      },
       // {
       //   src: shade09Kitchen,
       //   title: 'Dune Horizon',
@@ -662,6 +719,12 @@ export const series1Shades = [
       },
       {
         src: shade10CU1,
+        title: 'Nero Portoro',
+        usage: 'Close-up Detail',
+        type: 'image',
+      },
+      {
+        src: renderImage10,
         title: 'Nero Portoro',
         usage: 'Close-up Detail',
         type: 'image',
