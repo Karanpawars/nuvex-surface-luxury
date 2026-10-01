@@ -3,6 +3,7 @@ import { gsap } from 'gsap'
 import { ArrowRight, ChevronDown } from 'lucide-react'
 import heroBg from '../assets/images/hero-bg.png'
 import heroBgMobile from '../assets/images/hero-bg-mobile.png'
+import useSectionFade from '../hooks/useSectionFade'
 
 const rotatingLines = [
   'High-End Residential Interiors',
@@ -12,12 +13,15 @@ const rotatingLines = [
 ]
 
 export default function Hero() {
+  const sectionRef = useSectionFade()
   const root = useRef(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
-        defaults: { ease: 'power3.out' },
+        defaults: {
+          ease: 'power3.out',
+        },
       })
 
       tl.set('.hero-reveal', {
@@ -47,30 +51,35 @@ export default function Hero() {
   const scrollToStory = () => {
     document
       .querySelector('#our-story')
-      ?.scrollIntoView({ behavior: 'smooth' })
+      ?.scrollIntoView({
+        behavior: 'smooth',
+      })
   }
 
   const scrollToSection = (id) => {
     document
       .querySelector(id)
-      ?.scrollIntoView({ behavior: 'smooth' })
+      ?.scrollIntoView({
+        behavior: 'smooth',
+      })
   }
 
   return (
     <section
       id="home"
-      ref={root}
-      className="relative min-h-screen flex items-end bg-ink overflow-hidden pt-20"
+      ref={(element) => {
+        root.current = element
+        sectionRef.current = element
+      }}
+      className="scroll-fade-section relative min-h-screen flex items-end bg-ink overflow-hidden pt-20"
     >
       {/* HERO BACKGROUND IMAGE */}
-      <div className="hero-bg absolute inset-0">
-        {/* <img
-          src={heroBg}
-          alt=""
-          className="absolute inset-0 w-full h-auto object-cover object-cover"
-        /> */}
+      <div className="hero-bg absolute inset-0 opacity-0">
         <picture>
-          <source media="(max-width: 767px)" srcSet={heroBgMobile} />
+          <source
+            media="(max-width: 767px)"
+            srcSet={heroBgMobile}
+          />
 
           <img
             src={heroBg}
@@ -92,12 +101,12 @@ export default function Hero() {
       {/* HERO CONTENT */}
       <div className="container-inner relative z-10 px-6 md:px-12 pb-20 md:pb-28 w-full">
         <div className="max-w-2xl">
-
+{/* 
           <p className="hero-reveal text-white/80 text-lg md:text-xl font-display italic mb-3">
             NUVEX™ Surface Luxury —
-          </p>
+          </p> */}
 
-          <h1 className="hero-reveal font-display text-4xl sm:text-5xl md:text-7xl leading-[1.08] text-gold-light">
+          <h1 className="hero-reveal font-display text-3xl sm:text-3xl md:text-7xl leading-[1.09] text-gold-light">
             THE FUTURE OF <br />
             ARCHITECTURAL SURFACES.
           </h1>
@@ -152,6 +161,8 @@ export default function Hero() {
       >
         <ChevronDown size={18} />
       </button>
+
+      {/* DARK TO LIGHT TRANSITION */}
       <div
         className="
           absolute bottom-0 left-0 right-0

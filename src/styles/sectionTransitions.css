@@ -1,0 +1,20 @@
+/* Smooth section fade transition */
+
+.scroll-fade-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+  will-change: opacity, transform;
+}
+
+.scroll-fade-section.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-fade-section.section-hidden {
+  opacity: 0;
+  transform: translateY(-50px);
+}

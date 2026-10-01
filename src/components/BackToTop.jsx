@@ -6,14 +6,12 @@ export default function BackToTop() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 500) {
-        setIsVisible(true)
-      } else {
-        setIsVisible(false)
-      }
+      setIsVisible(window.scrollY > 500)
     }
 
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, {
+      passive: true,
+    })
 
     handleScroll()
 
@@ -34,20 +32,48 @@ export default function BackToTop() {
       type="button"
       onClick={scrollToTop}
       aria-label="Back to top"
+      aria-hidden={!isVisible}
+      tabIndex={isVisible ? 0 : -1}
       className={`
-        fixed bottom-6 right-6 z-50
-        w-12 h-12
+        fixed
+        bottom-6
+        right-6
+        z-50
+
+        w-12
+        h-12
+
         rounded-full
-        flex items-center justify-center
-        border border-gold/50
-        bg-ink
+
+        flex
+        items-center
+        justify-center
+
+        border
+        border-gold/50
+
+        bg-ink/95
+        backdrop-blur-md
+
         text-gold
+
         shadow-lg
-        transition-all duration-300
+
+        transition-all
+        duration-300
+        ease-out
+
         hover:bg-gold
         hover:text-ink
         hover:border-gold
         hover:-translate-y-1
+
+        focus:outline-none
+        focus-visible:ring-2
+        focus-visible:ring-gold
+        focus-visible:ring-offset-2
+        focus-visible:ring-offset-ink
+
         ${
           isVisible
             ? 'opacity-100 translate-y-0 pointer-events-auto'
@@ -55,7 +81,10 @@ export default function BackToTop() {
         }
       `}
     >
-      <ArrowUp size={18} strokeWidth={1.8} />
+      <ArrowUp
+        size={18}
+        strokeWidth={1.8}
+      />
     </button>
   )
 }

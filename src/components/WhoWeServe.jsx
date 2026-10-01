@@ -1,38 +1,85 @@
-import { Home, Compass, Handshake, ShieldCheck } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { ArrowUpRight } from 'lucide-react'
 import { whoWeServe } from '../data/content'
 import { useReveal } from '../hooks/useReveal'
-
-const icons = { Home, Compass, Handshake, ShieldCheck }
+import useSectionFade from '../hooks/useSectionFade'
 
 export default function WhoWeServe() {
-  const ref = useReveal('.reveal-item', { stagger: 0.1 })
+  const revealRef = useReveal('.reveal-item', {
+    stagger: 0.12,
+  })
+
+  const sectionRef = useSectionFade()
 
   return (
-    <section id="who-we-serve" ref={ref} className="section-pad bg-cream">
+    <section
+      id="who-we-serve"
+      ref={(element) => {
+        revealRef.current = element
+        sectionRef.current = element
+      }}
+      className="scroll-fade-section section-pad bg-sand text-ink border-b border-black/10 "
+    >
       <div className="container-inner">
-        <div className="reveal-item text-center max-w-3xl mx-auto mb-16">
-          <p className="eyebrow mb-4">Who We Serve</p>
-          <h2 className="text-2xl md:text-5xl text-ink leading-snug">
-            BUILT FOR EVERY STAGE OF THE DESIGN AND BUILD PROCESS.
+
+        {/* SECTION TITLE */}
+        <div className="reveal-item flex items-center justify-center gap-4 mb-16">
+          <span className="w-10 h-px bg-gold/50" />
+
+          <h2 className="text-2xl md:text-5xl tracking-wide text-center">
+            WHO WE SERVE
           </h2>
+
+          <span className="w-10 h-px bg-gold/50" />
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8">
-          {whoWeServe.map((item) => {
-            const Icon = icons[item.icon]
-            return (
-              <div key={item.title} className="reveal-item">
-                <div className="w-14 h-14 flex items-center justify-center text-gold mb-5">
-                  <Icon size={54} strokeWidth={1.3} />
-                </div>
-                <h3 className="text-ink font-bold text-[24px] mb-3 leading-snug">
+        {/* WHO WE SERVE CARDS */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {whoWeServe.map((item) => (
+            <Link
+              key={item.title}
+              to={item.href}
+              className="
+                reveal-item
+                group
+                border
+                border-ink/20
+                p-8
+                min-h-[260px]
+                flex
+                flex-col
+                justify-between
+                hover:border-gold
+                hover:bg-white/40
+                transition-all
+                duration-300
+              "
+            >
+              <div>
+                <p className="text-xs tracking-[0.25em] uppercase text-ink/45">
+                  NUVEX™
+                </p>
+
+                <h3 className="mt-8 text-2xl md:text-3xl font-light">
                   {item.title}
                 </h3>
-                <p className="text-ink/60 text-sm leading-relaxed">{item.text}</p>
+
+                <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                  {item.text}
+                </p>
               </div>
-            )
-          })}
+
+              {/* <div className="mt-8 flex justify-end">
+                <ArrowUpRight
+                  size={24}
+                  strokeWidth={1.5}
+                  className="text-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
+                />
+              </div> */}
+            </Link>
+          ))}
         </div>
+
       </div>
     </section>
   )

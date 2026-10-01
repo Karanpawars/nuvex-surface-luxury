@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { navLinks } from '../data/content'
 import logo from '../assets/images/logo.png'
@@ -6,6 +7,11 @@ import logo from '../assets/images/logo.png'
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const isHomePage = location.pathname === '/'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -15,8 +21,49 @@ export default function Header() {
 
   const handleNav = (href) => {
     setOpen(false)
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+
+    // If already on Home page, smoothly scroll to section
+    if (isHomePage) {
+      const el = document.querySelector(href)
+
+      if (el) {
+        el.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        })
+      }
+
+      return
+    }
+
+    // If on another page, go back to Home first
+    navigate('/')
+
+    // Wait for HomePage to render before scrolling
+    setTimeout(() => {
+      const el = document.querySelector(href)
+
+      if (el) {
+        el.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        })
+      }
+    }, 100)
+  }
+
+  const handleLogoClick = () => {
+    setOpen(false)
+
+    if (!isHomePage) {
+      navigate('/')
+      return
+    }
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
   }
 
   return (
@@ -26,7 +73,10 @@ export default function Header() {
       }`}
     >
       <div className="container-inner flex items-center justify-between px-6 md:px-12 h-20">
-        <a href="#home" onClick={(e) => { e.preventDefault(); handleNav('#home') }} className="flex flex-col leading-none">
+        <Link to="/" onClick={(e) => {
+            e.preventDefault()
+            handleLogoClick()
+          }} className="flex flex-col leading-none">
           {/* <span className="font-display text-2xl md:text-3xl tracking-widest2 text-white">
             NUVEX<span className="align-super text-[0.5em] text-gold">™</span>
           </span>
@@ -35,31 +85,31 @@ export default function Header() {
           </span> */}
           <img
             src={logo}
-            alt=""
+            alt="NUVEX Surface Luxury"
             className="w-40 h-auto"
           />
-        </a>
+        </Link>
 
         <nav className="hidden lg:flex items-center gap-9">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
-              href={link.href}
+              to={link.href}
               onClick={(e) => { e.preventDefault(); handleNav(link.href) }}
               className="text-xs tracking-widest2 uppercase text-white/80 hover:text-gold transition-colors"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
-        <a
-          href="#contact"
+        <Link
+          to="#contact"
           onClick={(e) => { e.preventDefault(); handleNav('#contact') }}
           className="hidden lg:inline-flex btn-gold"
         >
           Get In Touch
-        </a>
+        </Link>
 
         <button
           aria-label={open ? 'Close menu' : 'Open menu'}
@@ -73,22 +123,22 @@ export default function Header() {
       {open && (
         <div className="lg:hidden bg-ink border-t border-white/10 px-6 py-6 flex flex-col gap-5">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
-              href={link.href}
+              to={link.href}
               onClick={(e) => { e.preventDefault(); handleNav(link.href) }}
               className="text-sm tracking-widest2 uppercase text-white/85 hover:text-gold"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
+          <Link
+            to="#contact"
             onClick={(e) => { e.preventDefault(); handleNav('#contact') }}
             className="btn-gold justify-center mt-2"
           >
             Get In Touch
-          </a>
+          </Link>
         </div>
       )}
     </header>
